@@ -96,14 +96,14 @@ void connectToDB()
 		NULL,
 		SQL_DRIVER_NOPROMPT))
 
-	/*switch (SQLConnect(
-		sqlConnHandle,
-		serverName,
-		wcslen(serverNameL),
-		userName,
-		wcslen(userNameL),
-		auth,
-		wcslen(authL)))*/
+		/*switch (SQLConnect(
+			sqlConnHandle,
+			serverName,
+			wcslen(serverNameL),
+			userName,
+			wcslen(userNameL),
+			auth,
+			wcslen(authL)))*/
 	{
 
 	case SQL_SUCCESS:
@@ -154,7 +154,8 @@ void connectToDB()
 		SQLCHAR sqlVersion[SQL_RESULT_LEN];
 		SQLINTEGER ptrSqlVersion;
 
-		while (SQLFetch(sqlStmtHandle) == SQL_SUCCESS) {
+		while (SQLFetch(sqlStmtHandle) == SQL_SUCCESS)
+		{
 
 			SQLGetData(sqlStmtHandle, 1, SQL_CHAR, sqlVersion, SQL_RESULT_LEN, &ptrSqlVersion);
 

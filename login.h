@@ -80,10 +80,10 @@ namespace CSC400CLR2
 			this->loginButton->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->loginButton->FlatAppearance->BorderSize = 0;
 			this->loginButton->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->loginButton->Font = (gcnew System::Drawing::Font(L"Calibri", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->loginButton->Font = (gcnew System::Drawing::Font(L"Verdana", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->loginButton->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->loginButton->Location = System::Drawing::Point(86, 286);
+			this->loginButton->Location = System::Drawing::Point(85, 285);
 			this->loginButton->Name = L"loginButton";
 			this->loginButton->Size = System::Drawing::Size(105, 40);
 			this->loginButton->TabIndex = 0;
@@ -95,7 +95,7 @@ namespace CSC400CLR2
 			// 
 			this->textBox1->BackColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"Calibri", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->textBox1->Font = (gcnew System::Drawing::Font(L"Verdana", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->textBox1->ForeColor = System::Drawing::SystemColors::ControlLightLight;
 			this->textBox1->Location = System::Drawing::Point(15, 186);
@@ -108,7 +108,7 @@ namespace CSC400CLR2
 			// 
 			this->textBox2->BackColor = System::Drawing::SystemColors::ControlDarkDark;
 			this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			this->textBox2->Font = (gcnew System::Drawing::Font(L"Calibri", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->textBox2->Font = (gcnew System::Drawing::Font(L"Verdana", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->textBox2->ForeColor = System::Drawing::SystemColors::ControlLightLight;
 			this->textBox2->Location = System::Drawing::Point(15, 244);
@@ -120,12 +120,12 @@ namespace CSC400CLR2
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Calibri", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Verdana", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::SystemColors::ControlLightLight;
 			this->label1->Location = System::Drawing::Point(12, 169);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(65, 15);
+			this->label1->Size = System::Drawing::Size(78, 16);
 			this->label1->TabIndex = 3;
 			this->label1->Text = L"Username:";
 			this->label1->Click += gcnew System::EventHandler(this, &login::label1_Click);
@@ -133,12 +133,12 @@ namespace CSC400CLR2
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Calibri", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label2->Font = (gcnew System::Drawing::Font(L"Verdana", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::SystemColors::ControlLightLight;
 			this->label2->Location = System::Drawing::Point(12, 227);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(64, 15);
+			this->label2->Size = System::Drawing::Size(76, 16);
 			this->label2->TabIndex = 4;
 			this->label2->Text = L"Password:";
 			this->label2->Click += gcnew System::EventHandler(this, &login::label2_Click);
