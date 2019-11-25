@@ -101,7 +101,7 @@ namespace CSC400CLR2
 			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox1->Font = (gcnew System::Drawing::Font(L"Verdana", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox1->ForeColor = System::Drawing::SystemColors::ControlLightLight;
+			this->textBox1->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->textBox1->Location = System::Drawing::Point(349, 297);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(355, 20);

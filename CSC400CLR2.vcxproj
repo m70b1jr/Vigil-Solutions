@@ -133,13 +133,18 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="addApplicant.cpp" />
+    <ClCompile Include="homeOwnership.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="login.cpp" />
     <ClCompile Include="mainMenu.cpp" />
+    <ClCompile Include="repairs.cpp" />
     <ClCompile Include="surveyResults.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="addApplicant.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="homeOwnership.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="login.h">
@@ -147,6 +152,9 @@
     </ClInclude>
     <ClInclude Include="main.h" />
     <ClInclude Include="mainMenu.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="repairs.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="surveyResults.h">
@@ -157,11 +165,17 @@
     <EmbeddedResource Include="addApplicant.resx">
       <DependentUpon>addApplicant.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="homeOwnership.resx">
+      <DependentUpon>homeOwnership.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainMenu.resx">
       <DependentUpon>mainMenu.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="repairs.resx">
+      <DependentUpon>repairs.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="surveyResults.resx">
       <DependentUpon>surveyResults.h</DependentUpon>

@@ -1,6 +1,8 @@
 #pragma once
 #include "addApplicant.h"
 #include "surveyResults.h"
+#include "repairs.h"
+#include "homeOwnership.h"
 
 namespace CSC400CLR2
 {
@@ -40,8 +42,8 @@ namespace CSC400CLR2
 		}
 
 	protected:
-	private: System::Windows::Forms::TextBox^  textBox1;
-	private: System::Windows::Forms::VScrollBar^  vScrollBar1;
+
+
 	private: System::Windows::Forms::Button^  settings;
 	private: System::Windows::Forms::PictureBox^  pictureBox1;
 	private: System::ComponentModel::BackgroundWorker^  backgroundWorker1;
@@ -51,6 +53,8 @@ namespace CSC400CLR2
 	private: System::Windows::Forms::Button^  genSurvey;
 	private: System::Windows::Forms::Button^  editSurvey;
 	private: System::Windows::Forms::Button^  exportInfo;
+	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::Button^  button2;
 
 
 
@@ -80,8 +84,6 @@ namespace CSC400CLR2
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(mainMenu::typeid));
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->vScrollBar1 = (gcnew System::Windows::Forms::VScrollBar());
 			this->settings = (gcnew System::Windows::Forms::Button());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->backgroundWorker1 = (gcnew System::ComponentModel::BackgroundWorker());
@@ -90,23 +92,10 @@ namespace CSC400CLR2
 			this->genSurvey = (gcnew System::Windows::Forms::Button());
 			this->editSurvey = (gcnew System::Windows::Forms::Button());
 			this->exportInfo = (gcnew System::Windows::Forms::Button());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
-			// 
-			// textBox1
-			// 
-			this->textBox1->BackColor = System::Drawing::SystemColors::ControlLightLight;
-			this->textBox1->Location = System::Drawing::Point(335, 1);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(686, 20);
-			this->textBox1->TabIndex = 0;
-			// 
-			// vScrollBar1
-			// 
-			this->vScrollBar1->Location = System::Drawing::Point(1005, 25);
-			this->vScrollBar1->Name = L"vScrollBar1";
-			this->vScrollBar1->Size = System::Drawing::Size(15, 540);
-			this->vScrollBar1->TabIndex = 1;
 			// 
 			// settings
 			// 
@@ -157,7 +146,7 @@ namespace CSC400CLR2
 			this->addApplicantBtn->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->addApplicantBtn->Font = (gcnew System::Drawing::Font(L"Verdana", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->addApplicantBtn->Location = System::Drawing::Point(30, 140);
+			this->addApplicantBtn->Location = System::Drawing::Point(30, 150);
 			this->addApplicantBtn->Name = L"addApplicantBtn";
 			this->addApplicantBtn->Size = System::Drawing::Size(110, 25);
 			this->addApplicantBtn->TabIndex = 5;
@@ -170,11 +159,12 @@ namespace CSC400CLR2
 			// 
 			this->genSurvey->BackColor = System::Drawing::Color::Transparent;
 			this->genSurvey->FlatAppearance->BorderSize = 0;
+			this->genSurvey->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Transparent;
 			this->genSurvey->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Transparent;
 			this->genSurvey->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->genSurvey->Font = (gcnew System::Drawing::Font(L"Verdana", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->genSurvey->Location = System::Drawing::Point(30, 170);
+			this->genSurvey->Location = System::Drawing::Point(30, 240);
 			this->genSurvey->Name = L"genSurvey";
 			this->genSurvey->Size = System::Drawing::Size(130, 25);
 			this->genSurvey->TabIndex = 6;
@@ -188,10 +178,11 @@ namespace CSC400CLR2
 			this->editSurvey->BackColor = System::Drawing::Color::Transparent;
 			this->editSurvey->FlatAppearance->BorderSize = 0;
 			this->editSurvey->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Transparent;
+			this->editSurvey->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Transparent;
 			this->editSurvey->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->editSurvey->Font = (gcnew System::Drawing::Font(L"Verdana", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->editSurvey->Location = System::Drawing::Point(30, 200);
+			this->editSurvey->Location = System::Drawing::Point(30, 270);
 			this->editSurvey->Name = L"editSurvey";
 			this->editSurvey->Size = System::Drawing::Size(95, 25);
 			this->editSurvey->TabIndex = 7;
@@ -208,13 +199,49 @@ namespace CSC400CLR2
 			this->exportInfo->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->exportInfo->Font = (gcnew System::Drawing::Font(L"Verdana", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->exportInfo->Location = System::Drawing::Point(30, 230);
+			this->exportInfo->Location = System::Drawing::Point(30, 300);
 			this->exportInfo->Name = L"exportInfo";
 			this->exportInfo->Size = System::Drawing::Size(75, 25);
 			this->exportInfo->TabIndex = 8;
 			this->exportInfo->Text = L"Export";
 			this->exportInfo->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->exportInfo->UseVisualStyleBackColor = false;
+			// 
+			// button1
+			// 
+			this->button1->BackColor = System::Drawing::Color::Transparent;
+			this->button1->FlatAppearance->BorderSize = 0;
+			this->button1->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Transparent;
+			this->button1->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Transparent;
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button1->Font = (gcnew System::Drawing::Font(L"Verdana", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button1->Location = System::Drawing::Point(30, 180);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(125, 25);
+			this->button1->TabIndex = 9;
+			this->button1->Text = L"Homeownership";
+			this->button1->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &mainMenu::button1_Click);
+			// 
+			// button2
+			// 
+			this->button2->BackColor = System::Drawing::Color::Transparent;
+			this->button2->FlatAppearance->BorderSize = 0;
+			this->button2->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Transparent;
+			this->button2->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Transparent;
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button2->Font = (gcnew System::Drawing::Font(L"Verdana", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button2->Location = System::Drawing::Point(30, 210);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(70, 25);
+			this->button2->TabIndex = 10;
+			this->button2->Text = L"Repairs";
+			this->button2->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button2->UseVisualStyleBackColor = false;
+			this->button2->Click += gcnew System::EventHandler(this, &mainMenu::button2_Click);
 			// 
 			// mainMenu
 			// 
@@ -223,6 +250,8 @@ namespace CSC400CLR2
 			this->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1024, 576);
+			this->Controls->Add(this->button2);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->exportInfo);
 			this->Controls->Add(this->editSurvey);
 			this->Controls->Add(this->genSurvey);
@@ -230,8 +259,6 @@ namespace CSC400CLR2
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->settings);
-			this->Controls->Add(this->vScrollBar1);
-			this->Controls->Add(this->textBox1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Name = L"mainMenu";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
@@ -258,5 +285,15 @@ private: System::Void genSurvey_Click(System::Object^  sender, System::EventArgs
 }
 
 
+private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e)
+{
+	Form^ rp = gcnew surveyResults;
+	rp->Show();
+}
+private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e)
+{
+	Form^ ho = gcnew homeOwnership;
+	ho->Show();
+}
 };
 }
