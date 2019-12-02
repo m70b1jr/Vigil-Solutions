@@ -59,6 +59,9 @@
     <ClInclude Include="repairs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="headers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="login.resx">
@@ -74,6 +77,9 @@
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="homeOwnership.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="repairs.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>

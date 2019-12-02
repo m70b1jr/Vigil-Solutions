@@ -1,6 +1,7 @@
 #pragma once
-#include "repairs.h"
 #include "homeOwnership.h"
+#include "surveyResults.h"
+
 
 namespace CSC400CLR2 {
 
@@ -38,9 +39,9 @@ namespace CSC400CLR2 {
 		}
 	private: System::Windows::Forms::ToolStrip^  toolStrip1;
 	protected:
-	private: System::Windows::Forms::ToolStripButton^  toolStripButton1;
+
 	private: System::Windows::Forms::ToolStripButton^  toolStripButton2;
-	private: System::Windows::Forms::ToolStripButton^  toolStripButton3;
+
 	private: System::Windows::Forms::ToolStripButton^  toolStripButton4;
 	private: System::Windows::Forms::ToolStripButton^  toolStripButton5;
 	private: System::Windows::Forms::PictureBox^  pictureBox1;
@@ -102,9 +103,7 @@ namespace CSC400CLR2 {
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(repairs::typeid));
 			this->toolStrip1 = (gcnew System::Windows::Forms::ToolStrip());
-			this->toolStripButton1 = (gcnew System::Windows::Forms::ToolStripButton());
 			this->toolStripButton2 = (gcnew System::Windows::Forms::ToolStripButton());
-			this->toolStripButton3 = (gcnew System::Windows::Forms::ToolStripButton());
 			this->toolStripButton4 = (gcnew System::Windows::Forms::ToolStripButton());
 			this->toolStripButton5 = (gcnew System::Windows::Forms::ToolStripButton());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
@@ -156,27 +155,15 @@ namespace CSC400CLR2 {
 			// 
 			this->toolStrip1->Font = (gcnew System::Drawing::Font(L"Verdana", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->toolStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5) {
-				this->toolStripButton1,
-					this->toolStripButton2, this->toolStripButton3, this->toolStripButton4, this->toolStripButton5
+			this->toolStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+				this->toolStripButton2,
+					this->toolStripButton4, this->toolStripButton5
 			});
 			this->toolStrip1->Location = System::Drawing::Point(0, 0);
 			this->toolStrip1->Name = L"toolStrip1";
 			this->toolStrip1->Size = System::Drawing::Size(584, 25);
 			this->toolStrip1->TabIndex = 31;
 			this->toolStrip1->Text = L"toolStrip1";
-			// 
-			// toolStripButton1
-			// 
-			this->toolStripButton1->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Text;
-			this->toolStripButton1->Font = (gcnew System::Drawing::Font(L"Verdana", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->toolStripButton1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripButton1.Image")));
-			this->toolStripButton1->ImageTransparentColor = System::Drawing::Color::Magenta;
-			this->toolStripButton1->Name = L"toolStripButton1";
-			this->toolStripButton1->Size = System::Drawing::Size(60, 22);
-			this->toolStripButton1->Text = L"General";
-			this->toolStripButton1->Click += gcnew System::EventHandler(this, &repairs::toolStripButton1_Click);
 			// 
 			// toolStripButton2
 			// 
@@ -188,15 +175,6 @@ namespace CSC400CLR2 {
 			this->toolStripButton2->Text = L"Homeownership";
 			this->toolStripButton2->Click += gcnew System::EventHandler(this, &repairs::toolStripButton2_Click);
 			// 
-			// toolStripButton3
-			// 
-			this->toolStripButton3->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Text;
-			this->toolStripButton3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripButton3.Image")));
-			this->toolStripButton3->ImageTransparentColor = System::Drawing::Color::Magenta;
-			this->toolStripButton3->Name = L"toolStripButton3";
-			this->toolStripButton3->Size = System::Drawing::Size(58, 22);
-			this->toolStripButton3->Text = L"Repairs";
-			// 
 			// toolStripButton4
 			// 
 			this->toolStripButton4->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Text;
@@ -205,6 +183,7 @@ namespace CSC400CLR2 {
 			this->toolStripButton4->Name = L"toolStripButton4";
 			this->toolStripButton4->Size = System::Drawing::Size(104, 22);
 			this->toolStripButton4->Text = L"Survey Results";
+			this->toolStripButton4->Click += gcnew System::EventHandler(this, &repairs::toolStripButton4_Click);
 			// 
 			// toolStripButton5
 			// 
@@ -773,6 +752,12 @@ private: System::Void toolStripButton2_Click(System::Object^  sender, System::Ev
 	this->Hide();
 	Form^ ho = gcnew homeOwnership;
 	ho->Show();
+}
+private: System::Void toolStripButton3_Click(System::Object^  sender, System::EventArgs^  e)
+{
+}
+private: System::Void toolStripButton4_Click(System::Object^  sender, System::EventArgs^  e)
+{
 }
 };
 }

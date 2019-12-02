@@ -1,7 +1,6 @@
 #pragma once
 #include "repairs.h"
 #include "homeOwnership.h"
-
 namespace CSC400CLR2 {
 
 	using namespace System;
@@ -45,10 +44,10 @@ namespace CSC400CLR2 {
 	private: System::Windows::Forms::ComboBox^  comboBox1;
 	private: System::Windows::Forms::Label^  label4;
 	private: System::Windows::Forms::ToolStripButton^  toolStripButton5;
-	private: System::Windows::Forms::ToolStripButton^  toolStripButton4;
+
 	private: System::Windows::Forms::ToolStripButton^  toolStripButton3;
 	private: System::Windows::Forms::ToolStripButton^  toolStripButton2;
-	private: System::Windows::Forms::ToolStripButton^  toolStripButton1;
+
 	private: System::Windows::Forms::ToolStrip^  toolStrip1;
 	protected:
 
@@ -75,10 +74,8 @@ namespace CSC400CLR2 {
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->toolStripButton5 = (gcnew System::Windows::Forms::ToolStripButton());
-			this->toolStripButton4 = (gcnew System::Windows::Forms::ToolStripButton());
 			this->toolStripButton3 = (gcnew System::Windows::Forms::ToolStripButton());
 			this->toolStripButton2 = (gcnew System::Windows::Forms::ToolStripButton());
-			this->toolStripButton1 = (gcnew System::Windows::Forms::ToolStripButton());
 			this->toolStrip1 = (gcnew System::Windows::Forms::ToolStrip());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->toolStrip1->SuspendLayout();
@@ -192,15 +189,6 @@ namespace CSC400CLR2 {
 			this->toolStripButton5->Size = System::Drawing::Size(42, 22);
 			this->toolStripButton5->Text = L"Save";
 			// 
-			// toolStripButton4
-			// 
-			this->toolStripButton4->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Text;
-			this->toolStripButton4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripButton4.Image")));
-			this->toolStripButton4->ImageTransparentColor = System::Drawing::Color::Magenta;
-			this->toolStripButton4->Name = L"toolStripButton4";
-			this->toolStripButton4->Size = System::Drawing::Size(104, 22);
-			this->toolStripButton4->Text = L"Survey Results";
-			// 
 			// toolStripButton3
 			// 
 			this->toolStripButton3->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Text;
@@ -221,24 +209,13 @@ namespace CSC400CLR2 {
 			this->toolStripButton2->Text = L"Homeownership";
 			this->toolStripButton2->Click += gcnew System::EventHandler(this, &surveyResults::toolStripButton2_Click);
 			// 
-			// toolStripButton1
-			// 
-			this->toolStripButton1->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Text;
-			this->toolStripButton1->Font = (gcnew System::Drawing::Font(L"Verdana", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->toolStripButton1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripButton1.Image")));
-			this->toolStripButton1->ImageTransparentColor = System::Drawing::Color::Magenta;
-			this->toolStripButton1->Name = L"toolStripButton1";
-			this->toolStripButton1->Size = System::Drawing::Size(60, 22);
-			this->toolStripButton1->Text = L"General";
-			// 
 			// toolStrip1
 			// 
 			this->toolStrip1->Font = (gcnew System::Drawing::Font(L"Verdana", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->toolStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5) {
-				this->toolStripButton1,
-					this->toolStripButton2, this->toolStripButton3, this->toolStripButton4, this->toolStripButton5
+			this->toolStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+				this->toolStripButton2,
+					this->toolStripButton3, this->toolStripButton5
 			});
 			this->toolStrip1->Location = System::Drawing::Point(0, 0);
 			this->toolStrip1->Name = L"toolStrip1";
@@ -264,6 +241,7 @@ namespace CSC400CLR2 {
 			this->Name = L"surveyResults";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Survey Results";
+			this->Load += gcnew System::EventHandler(this, &surveyResults::surveyResults_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->toolStrip1->ResumeLayout(false);
 			this->toolStrip1->PerformLayout();
@@ -281,8 +259,17 @@ namespace CSC400CLR2 {
 private: System::Void toolStripButton3_Click(System::Object^  sender, System::EventArgs^  e)
 {
 	this->Hide();
-	Form^ rp = gcnew surveyResults;
+	Form^ rp = gcnew repairs;
 	rp->Show();
+}
+private: System::Void toolStripButton1_Click(System::Object^  sender, System::EventArgs^  e)
+{
+}
+private: System::Void toolStripButton4_Click(System::Object^  sender, System::EventArgs^  e)
+{
+
+}
+private: System::Void surveyResults_Load(System::Object^  sender, System::EventArgs^  e) {
 }
 };
 }

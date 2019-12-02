@@ -67,13 +67,19 @@ namespace CSC400CLR2 {
 	private: System::Windows::Forms::Label^  label12;
 	private: System::Windows::Forms::ComboBox^  comboBox1;
 	private: System::Windows::Forms::ComboBox^  comboBox2;
-	private: System::Windows::Forms::ToolStrip^  toolStrip1;
-	private: System::Windows::Forms::ToolStripButton^  toolStripButton1;
-	private: System::Windows::Forms::ToolStripButton^  toolStripButton2;
-	private: System::Windows::Forms::ToolStripButton^  toolStripButton3;
-	private: System::Windows::Forms::ToolStripButton^  toolStripButton4;
-	private: System::Windows::Forms::ToolStripButton^  toolStripButton5;
+
+
+
+
+
+
 	private: System::Windows::Forms::ContextMenuStrip^  contextMenuStrip1;
+	private: System::Windows::Forms::ToolStrip^  toolStrip1;
+
+	private: System::Windows::Forms::ToolStripButton^  toolStripButton2;
+	private: System::Windows::Forms::ToolStripButton^  toolStripButton4;
+	private: System::Windows::Forms::ToolStripButton^  toolStripButton3;
+	private: System::Windows::Forms::ToolStripButton^  toolStripButton5;
 	private: System::ComponentModel::IContainer^  components;
 
 	private:
@@ -120,13 +126,12 @@ namespace CSC400CLR2 {
 			this->label12 = (gcnew System::Windows::Forms::Label());
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
+			this->contextMenuStrip1 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
 			this->toolStrip1 = (gcnew System::Windows::Forms::ToolStrip());
-			this->toolStripButton1 = (gcnew System::Windows::Forms::ToolStripButton());
 			this->toolStripButton2 = (gcnew System::Windows::Forms::ToolStripButton());
 			this->toolStripButton3 = (gcnew System::Windows::Forms::ToolStripButton());
 			this->toolStripButton4 = (gcnew System::Windows::Forms::ToolStripButton());
 			this->toolStripButton5 = (gcnew System::Windows::Forms::ToolStripButton());
-			this->contextMenuStrip1 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->BeginInit();
 			this->toolStrip1->SuspendLayout();
@@ -488,13 +493,16 @@ namespace CSC400CLR2 {
 			this->comboBox2->Size = System::Drawing::Size(120, 24);
 			this->comboBox2->TabIndex = 28;
 			// 
+			// contextMenuStrip1
+			// 
+			this->contextMenuStrip1->Name = L"contextMenuStrip1";
+			this->contextMenuStrip1->Size = System::Drawing::Size(61, 4);
+			// 
 			// toolStrip1
 			// 
-			this->toolStrip1->Font = (gcnew System::Drawing::Font(L"Verdana", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->toolStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5) {
-				this->toolStripButton1,
-					this->toolStripButton2, this->toolStripButton3, this->toolStripButton4, this->toolStripButton5
+			this->toolStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
+				this->toolStripButton2,
+					this->toolStripButton3, this->toolStripButton4, this->toolStripButton5
 			});
 			this->toolStrip1->Location = System::Drawing::Point(0, 0);
 			this->toolStrip1->Name = L"toolStrip1";
@@ -502,27 +510,14 @@ namespace CSC400CLR2 {
 			this->toolStrip1->TabIndex = 29;
 			this->toolStrip1->Text = L"toolStrip1";
 			// 
-			// toolStripButton1
-			// 
-			this->toolStripButton1->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Text;
-			this->toolStripButton1->Font = (gcnew System::Drawing::Font(L"Verdana", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->toolStripButton1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripButton1.Image")));
-			this->toolStripButton1->ImageTransparentColor = System::Drawing::Color::Magenta;
-			this->toolStripButton1->Name = L"toolStripButton1";
-			this->toolStripButton1->Size = System::Drawing::Size(60, 22);
-			this->toolStripButton1->Text = L"General";
-			this->toolStripButton1->Click += gcnew System::EventHandler(this, &addApplicant::toolStripButton1_Click);
-			// 
 			// toolStripButton2
 			// 
 			this->toolStripButton2->DisplayStyle = System::Windows::Forms::ToolStripItemDisplayStyle::Text;
 			this->toolStripButton2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripButton2.Image")));
 			this->toolStripButton2->ImageTransparentColor = System::Drawing::Color::Magenta;
 			this->toolStripButton2->Name = L"toolStripButton2";
-			this->toolStripButton2->Size = System::Drawing::Size(113, 22);
+			this->toolStripButton2->Size = System::Drawing::Size(99, 22);
 			this->toolStripButton2->Text = L"Homeownership";
-			this->toolStripButton2->Click += gcnew System::EventHandler(this, &addApplicant::toolStripButton2_Click);
 			// 
 			// toolStripButton3
 			// 
@@ -530,9 +525,8 @@ namespace CSC400CLR2 {
 			this->toolStripButton3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripButton3.Image")));
 			this->toolStripButton3->ImageTransparentColor = System::Drawing::Color::Magenta;
 			this->toolStripButton3->Name = L"toolStripButton3";
-			this->toolStripButton3->Size = System::Drawing::Size(58, 22);
+			this->toolStripButton3->Size = System::Drawing::Size(49, 22);
 			this->toolStripButton3->Text = L"Repairs";
-			this->toolStripButton3->Click += gcnew System::EventHandler(this, &addApplicant::toolStripButton3_Click);
 			// 
 			// toolStripButton4
 			// 
@@ -540,9 +534,8 @@ namespace CSC400CLR2 {
 			this->toolStripButton4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripButton4.Image")));
 			this->toolStripButton4->ImageTransparentColor = System::Drawing::Color::Magenta;
 			this->toolStripButton4->Name = L"toolStripButton4";
-			this->toolStripButton4->Size = System::Drawing::Size(104, 22);
+			this->toolStripButton4->Size = System::Drawing::Size(86, 22);
 			this->toolStripButton4->Text = L"Survey Results";
-			this->toolStripButton4->Click += gcnew System::EventHandler(this, &addApplicant::toolStripButton4_Click);
 			// 
 			// toolStripButton5
 			// 
@@ -550,13 +543,8 @@ namespace CSC400CLR2 {
 			this->toolStripButton5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripButton5.Image")));
 			this->toolStripButton5->ImageTransparentColor = System::Drawing::Color::Magenta;
 			this->toolStripButton5->Name = L"toolStripButton5";
-			this->toolStripButton5->Size = System::Drawing::Size(42, 22);
+			this->toolStripButton5->Size = System::Drawing::Size(35, 22);
 			this->toolStripButton5->Text = L"Save";
-			// 
-			// contextMenuStrip1
-			// 
-			this->contextMenuStrip1->Name = L"contextMenuStrip1";
-			this->contextMenuStrip1->Size = System::Drawing::Size(61, 4);
 			// 
 			// addApplicant
 			// 

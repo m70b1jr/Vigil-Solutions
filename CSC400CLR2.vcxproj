@@ -144,6 +144,7 @@
     <ClInclude Include="addApplicant.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="headers.h" />
     <ClInclude Include="homeOwnership.h">
       <FileType>CppForm</FileType>
     </ClInclude>
